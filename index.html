@@ -52,6 +52,7 @@
             document.getElementById('field-link').href         = json.men_link;
             document.getElementById('field-title').innerText   = json.men_title;
             document.getElementById('field-title').href       = json.men_link;
+            document.getElementById('field-random').href       = './?id=' + getRandomCommentId(); 
 
             document.getElementById('field-share').href        = 'https://www.meneame.net/submit?url=' + encodeURIComponent(url);
 
@@ -66,8 +67,13 @@
         }
 
         window.addEventListener('load', function() {
-            var commentId = getRandomCommentId();
-            displayComment(commentId);
+            let queryParams = new URLSearchParams(window.location.search);
+
+            let id = queryParams.get('id');
+            if (!id) {
+                id = getRandomCommentId();
+            }
+            displayComment(id);
         });
 
     </script>
@@ -77,7 +83,7 @@
     <div class="container mt-5">
 
         <div class="randomlink">
-            <a href="" class="randomlink__anchor">
+            <a href="" class="randomlink__anchor" id="field-random">
                 <i class="randomlink__icon fa fa-shuffle"></i>
                 Aleatorio
             </a>
