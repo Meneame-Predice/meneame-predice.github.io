@@ -1,0 +1,34 @@
+/* General */
+    html, body {
+        -webkit-font-smoothing : antialiased; -moz-osx-font-smoothing : grayscale; 
+        font-family: 'Open Sans', sans-serif; 
+    }
+
+    .mark, mark {font-weight: bold;background: #E35614;color: white;}
+
+    .title {font-style: italic;text-decoration: none;color: inherit !important;}
+    
+    .randomlink {/* text-align: right; */font-weight: bold;font-size: 22px;margin-bottom: 15px;float: right;}
+    .randomlink__anchor {color: #E35614;text-decoration: none; transition: all 0.5s;}
+    .randomlink__anchor:hover { color:#E35614; opacity: 0.7; text-decoration: none; }
+    .randomlink__icon { color: #FEB48B; }
+
+    .quote {background: #FFD5AD;padding: 40px;font-size: 22px;margin-bottom: 15px;position: relative;white-space: pre-wrap;}
+    .quote:before,
+    .quote:after { position:absolute;display: block;color: #E35614;font-size: 150px;font-weight: bold;line-height: 100%;font-family: Georgia, 'Times New Roman', Times, serif;}
+    .quote:before {content:'“';top: -30px;left: -25px;}
+    .quote:after {content:'”';right: -25px;bottom: -100px;}
+    .quotefooter { font-size: 14px; font-weight: bold; color: #444444; }
+    .quotefooter__label {color: #ADCEDF;text-transform: uppercase;font-weight: bold;}
+    .quotefooter__value { }
+    .quotefooter__pipe {color: #ADCEDF;margin: 0 10px;}
+    .quotefooter__share {color: #E35614;text-decoration: none; transition: all 0.5s;}
+    .quotefooter__share:hover { color:#E35614;opacity: 0.7;text-decoration: none; }
+    .quotefooter__share .fa { color:#FEB48B; }
+
+    .author {font-size: 30px;margin-top: 20px;text-align: center;display: block;text-decoration: none !important;color: #333 !important;}
+    .author__name { color: #E35614; font-weight: bold; }
+    .author__date {font-size: 0.6em;font-weight: bold;vertical-align: middle;}
+
+    .disclaimer { border-top: #ccc 1px solid; text-align: center; margin-top: 50px; margin-bottom: 20px; padding-top: 10px; color: #999; }
+    .disclaimer a { text-decoration: underline; color: inherit; }
